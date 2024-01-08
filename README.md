@@ -1,3 +1,11 @@
+# Description 
+
+This repo is a fork of the original project [micro-bmark](https://github.com/paulmillr/micro-bmark).
+
+## Changes Made
+
+- Add `.d.ts` file for Typescript support.
+
 # micro-bmark
 
 Benchmark your node.js projects with nanosecond resolution.

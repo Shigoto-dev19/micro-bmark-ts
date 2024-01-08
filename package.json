@@ -1,10 +1,12 @@
 {
-  "name": "micro-bmark",
-  "version": "0.3.1",
-  "description": "Benchmark your node.js projects with nanosecond resolution",
+  "name": "micro-bmark-ts",
+  "version": "0.3.2",
+  "description": "Benchmark your node.js/Typescript projects with nanosecond resolution",
   "main": "index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "index.js"
+    "index.js",
+    "./dist/index.d.ts"
   ],
   "scripts": {
     "test": "node test.js"
@@ -20,11 +22,22 @@
     "date",
     "micro"
   ],
-  "author": "Paul Miller (https://paulmillr.com)",
+  "contributors": [
+      {
+          "name": "Paul Miller",
+          "githubUsername": "paulmillr",
+          "url": "https://paulmillr.com"
+      },
+      {
+          "name": "Mahmoud Kaffel",
+          "githubUsername": "Shigoto-dev19",
+          "url": "https://github.com/Shigoto-dev19"
+      }
+  ],
   "homepage": "https://github.com/paulmillr/micro-bmark",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulmillr/micro-bmark.git"
+    "url": "https://github.com/Shigoto-dev19/micro-bmark-ts.git"
   },
   "license": "MIT"
 }
