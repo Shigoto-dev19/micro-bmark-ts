@@ -7,54 +7,12 @@ export namespace utils {
     export { calcCorrelation };
 }
 export function mark(label: Label, samples: Samples, callback?: Function): Promise<void>;
-export function compare(title: string, samples: Samples, cases: Function[]): Promise<void>;
+export function compare(title: string, samples: Samples, cases: FunctionObject): Promise<void>;
 export function run(tries: Function, callback?: Function): Promise<void>;
 
-declare const red = "\u001B[31m";
-declare const green = "\u001B[32m";
-declare const blue = "\u001B[34m";
-declare const cyan = "\u001B[36m";
-declare const reset = "\u001B[0m";
 declare function getTime(): bigint;
 declare function logMem(): void;
-declare const tTable: {
-    '1': number;
-    '2': number;
-    '3': number;
-    '4': number;
-    '5': number;
-    '6': number;
-    '7': number;
-    '8': number;
-    '9': number;
-    '10': number;
-    '11': number;
-    '12': number;
-    '13': number;
-    '14': number;
-    '15': number;
-    '16': number;
-    '17': number;
-    '18': number;
-    '19': number;
-    '20': number;
-    '21': number;
-    '22': number;
-    '23': number;
-    '24': number;
-    '25': number;
-    '26': number;
-    '27': number;
-    '28': number;
-    '29': number;
-    '30': number;
-    infinity: number;
-};
-declare const μs: bigint, ms: bigint, sec: bigint, min: bigint;
-declare const formatter: Intl.NumberFormat;
 declare function formatD(duration: bigint): string;
-declare function calcSum(list: bigint[]): bigint;
-declare function calcMean(list: bigint[]): bigint;
 declare function calcDeviation(list: bigint[]): number;
 declare function calcCorrelation(x: bigint[], y: bigint[]): number;
 declare function calcStats(list: bigint[]): {
@@ -67,7 +25,8 @@ declare function calcStats(list: bigint[]): {
 };
 type Label = Function | string;
 type Samples = Function | number | null;
-declare const LEAF_N = "\u251C\u2500";
-declare const LEAF_L = "\u2514\u2500";
+type FunctionObject = {
+    [key: string]: Function;
+  };
 export {};
 //# sourceMappingURL=index.d.ts.map
