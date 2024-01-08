@@ -1,3 +1,15 @@
+export namespace utils {
+    export { getTime };
+    export { logMem };
+    export { formatD };
+    export { calcStats };
+    export { calcDeviation };
+    export { calcCorrelation };
+}
+export function mark(label: Label, samples: Samples, callback?: Function): Promise<void>;
+export function compare(title: string, samples: Samples, cases: Function[]): Promise<void>;
+export function run(tries: Function, callback?: Function): Promise<void>;
+
 declare const red = "\u001B[31m";
 declare const green = "\u001B[32m";
 declare const blue = "\u001B[34m";
@@ -55,9 +67,7 @@ declare function calcStats(list: bigint[]): {
 };
 type Label = Function | string;
 type Samples = Function | number | null;
-declare function mark(label: Label, samples: Samples, callback?: Function): Promise<void>;
 declare const LEAF_N = "\u251C\u2500";
 declare const LEAF_L = "\u2514\u2500";
-declare function compare(title: string, samples: Samples, cases: Function[]): Promise<void>;
-declare function run(tries: Function, callback?: Function): Promise<void>;
+export {};
 //# sourceMappingURL=index.d.ts.map
