@@ -27,6 +27,5 @@ type Label = Function | string;
 type Samples = Function | number | null;
 type FunctionObject = {
     [key: string]: Function;
-  };
+};
 export {};
-//# sourceMappingURL=index.d.ts.map
