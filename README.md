@@ -1,6 +1,8 @@
-# Description 
+# Description
 
 This repo is a fork of the original project [micro-bmark](https://github.com/paulmillr/micro-bmark).
+
+All credits go to the original authors, as described in the [License](#license).
 
 ## Changes Made
 
@@ -23,16 +25,16 @@ Benchmark your node.js projects with nanosecond resolution.
     npm install --save-dev micro-bmark
 
 ```js
-import * as bench from 'micro-bmark';
-await bench.mark('printing', () => Promise.resolve(0));
+import * as bench from "micro-bmark";
+await bench.mark("printing", () => Promise.resolve(0));
 
 const { mark, compare, run } = bench; // Or, use as such
 run(async () => {
-  await mark('base', () => Promise.resolve(1));
-  await mark('sqrt', 10000, () => Math.sqrt(2));
-  await compare('math', 5000, {
+  await mark("base", () => Promise.resolve(1));
+  await mark("sqrt", 10000, () => Math.sqrt(2));
+  await compare("math", 5000, {
     lib1: () => Math.sqrt(2),
-    lib2: () => Math.sqrt(3)
+    lib2: () => Math.sqrt(3),
   });
   // bench.utils.logMem(); // Log current RAM
   // console.log(bench.utils.getTime(), bench.utils.formatD(bench.utils.getTime())); // Get current time in nanoseconds
@@ -53,7 +55,7 @@ getSharedSecret aka ecdh x 585 ops/sec @ 1ms/op
 - `await bench.run(args?, callback)`: Runs bunch of suites. Not required
 - `await bench.mark(label?, samples?, callback)`: Measures callback (can be async) `samples` times
 - `await bench.compare(label, samples, map)`: mark, but compares runs between object values
-    - `map`: `{ a: () => {}, b: () => {} }`
+  - `map`: `{ a: () => {}, b: () => {} }`
 - `bench.utils.logMem(): undefined`: Logs memory usage
 - `bench.utils.getTime(): bigint`: Returns current time in bigint.
 

@@ -1,6 +1,6 @@
 {
   "name": "micro-bmark-ts",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Benchmark your node.js/Typescript projects with nanosecond resolution",
   "main": "index.js",
   "types": "./dist/index.d.ts",
